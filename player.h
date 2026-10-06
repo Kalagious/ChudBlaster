@@ -7,10 +7,10 @@ class Player
 {
 public:
 	Player(std::string newName, INT64 newHealth, INT64 newArmor);
+	std::string name;
 
 	INT64 health;
 	INT64 armor;
-	std::string name;
 	Weapon* heldWeapon;
 
 
