@@ -30,7 +30,7 @@ void Player::TakeDamage(INT64 dmg)
 {
 	INT64 finalDmg = dmg - armor;
 
-	health -= finalDmg;
+	health = health - finalDmg;
 
 	printf("%s took %d damage\n", name.c_str(), finalDmg);
 }

@@ -4,4 +4,5 @@
     <Platform Name="x86" />
   </Configurations>
   <Project Path="ChudBlaster/ChudBlaster.vcxproj" Id="41d7ca2c-4b77-4b21-a9c5-f5f013b0e29c" />
+  <Project Path="ExternalBase/ExternalBase.vcxproj" Id="7cd2399b-ebbd-4533-ac85-ec74b52e20b7" />
 </Solution>
