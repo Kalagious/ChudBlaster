@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="ChudBlaster/ChudBlaster.vcxproj" Id="41d7ca2c-4b77-4b21-a9c5-f5f013b0e29c" />
+</Solution>
