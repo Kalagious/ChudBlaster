@@ -3,11 +3,11 @@
 class Weapon
 {
 public:
-	Weapon(std::string newName, UINT64 newDamage);
+	Weapon(std::string newName, INT64 newDamage);
 
 	std::string name;
-	UINT64 damage;
+	INT64 damage;
 
-	UINT64 GetDamage();
+	INT64 GetDamage();
 
 };

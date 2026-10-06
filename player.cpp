@@ -4,7 +4,7 @@
 
 // Player Function Definitions
 
-Player::Player(std::string newName, UINT64 newHealth, UINT64 newArmor)
+Player::Player(std::string newName, INT64 newHealth, INT64 newArmor)
 {
 	name = newName;
 	health = newHealth;
@@ -26,9 +26,9 @@ void Player::EquipWeapon(Weapon* weapon)
 	printf("%s equipped %s!\n", name.c_str(), weapon->name.c_str());
 }
 
-void Player::TakeDamage(UINT64 dmg)
+void Player::TakeDamage(INT64 dmg)
 {
-	UINT64 finalDmg = dmg - armor;
+	INT64 finalDmg = dmg - armor;
 
 	health -= finalDmg;
 
@@ -37,7 +37,7 @@ void Player::TakeDamage(UINT64 dmg)
 
 void Player::DealDamage(Player* target)
 {
-	UINT64 dmg = heldWeapon->GetDamage();
+	INT64 dmg = heldWeapon->GetDamage();
 	target->TakeDamage(dmg);
 }
 

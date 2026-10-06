@@ -21,25 +21,30 @@ int main()
 	// Equip weapons
 	local->EquipWeapon(pistol);
 	enemy->EquipWeapon(ar);
-
-
-	// Run game loop until someone loses
-	// Basic game loop, both players attack and print health results
-	while (local->IsAlive() && enemy->IsAlive())
+	while (true)
 	{
-		enemy->DealDamage(local);
-		local->DealDamage(enemy);
-		enemy->DisplayHealth();
-		local->DisplayHealth();
-		std::getchar();
+
+		// Run game loop until someone loses
+		// Basic game loop, both players attack and print health results
+		while (local->IsAlive() && enemy->IsAlive())
+		{
+			enemy->DealDamage(local);
+			local->DealDamage(enemy);
+			enemy->DisplayHealth();
+			local->DisplayHealth();
+			std::getchar();
+		}
+
+		// Check who lost
+		if (local->IsAlive())
+			printf("You killed the enemy first and won! Congrats!\n");
+		else if (enemy->IsAlive())
+			printf("You died first. You Lost!\n");
+
+		printf("\nGame Restarting\n");
+
+		local->health = 100;
+		enemy->health = 100;
 	}
-
-	// Check who lost
-	if (local->IsAlive())
-		printf("You killed the enemy first and won! Congrats!\n");
-	else if (enemy->IsAlive())
-		printf("You died first. You Lost!\n");
-
-
 	return 0;
 }

@@ -1,14 +1,14 @@
 #include "weapon.h"
 
 
-Weapon::Weapon(std::string newName, UINT64 newDamage)
+Weapon::Weapon(std::string newName, INT64 newDamage)
 {
 	name = newName;
 	damage = newDamage;
 }
 
 
-UINT64 Weapon::GetDamage()
+INT64 Weapon::GetDamage()
 {
 	return damage;
 }

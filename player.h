@@ -6,17 +6,17 @@
 class Player
 {
 public:
-	Player(std::string newName, UINT64 newHealth, UINT64 newArmor);
+	Player(std::string newName, INT64 newHealth, INT64 newArmor);
 
-	UINT64 health;
-	UINT64 armor;
+	INT64 health;
+	INT64 armor;
 	std::string name;
 	Weapon* heldWeapon;
 
 
 	void EquipWeapon(Weapon* weapon);
 
-	void TakeDamage(UINT64 dmg);
+	void TakeDamage(INT64 dmg);
 	void DealDamage(Player* target);
 
 	void DisplayHealth();
